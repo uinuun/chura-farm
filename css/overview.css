@@ -1,0 +1,136 @@
+/*------------------------------*/
+body {
+    font-family: "Shippori Mincho", serif, 'Arial', sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .top {
+    display: flex;
+    align-items: center; /* ロゴとナビの垂直位置を揃える */
+    text-align: left;
+  }
+  
+  .top img {
+    width: 16vw;
+    margin-left: 1.5vw;
+  }
+  
+  .top-line {
+    width: 100%;
+    height: 0.5vw; 
+    background-color: #3c803c;
+    margin: 0; 
+    padding: 0; 
+  }
+  
+  .header {
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0.3%;
+    color: rgb(255, 255, 255);
+    z-index: 10; /* 他のコンテンツより上に表示 */
+    background-color: rgba(255, 255, 255); /* 白の半透明背景 */
+    display: flex;
+    justify-content: space-between; /* ロゴとナビを左右に配置 */
+    align-items: center; /* 高さを中央揃え */
+  }
+  
+  nav ul {
+    list-style-type: none;
+    display: flex; /* 横並びにする */
+    gap: 3.5vw; /* アイテム間のスペースを調整 (例: 1remに設定) */
+  }
+  
+  nav ul li a {
+    color: rgb(46, 46, 46);
+    text-decoration: none;
+    font-size: 0.9vw;
+    white-space: nowrap; /* テキストが折り返されないように設定 */
+  }
+  
+  nav ul li:last-child a {
+    margin-right: 3vw; /* 右側に余白を追加 */
+  }
+  
+  nav ul li a:hover {
+    text-decoration: underline;
+    color: #3c803c;
+  }
+  
+  /*---------------------------------*/
+  
+  .overviewphoto {
+    position: relative;
+    width: 100%;
+    height: 35vh;
+    overflow: hidden; 
+  }
+  
+  .overviewphoto img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    min-height: 100%;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .overview-text {
+    position: absolute;
+    top: 50%; /* 画面の中央に配置 */
+    left: 50%;
+    transform: translate(-50%, -50%); /* 文字を中央揃え */
+    color: white; /* 文字の色を白に設定 */
+    font-size: 2.3vw; /* 文字のサイズ */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    letter-spacing: 0.1em;
+  }
+  
+  /*---------------------------------*/
+    
+
+  main {
+    margin-top: 40px;
+    text-align: center;
+  }
+  
+ 
+  ul {
+    list-style-type: none;
+  }
+  
+  ul li {
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+  }
+  
+  ul li strong {
+    font-weight: 700;
+  }
+  
+  a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+
+  /*---------------------------------*/
+
+  footer {
+    background-color: #3c803c;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    bottom: 0;
+    width: 100%;
+  }
