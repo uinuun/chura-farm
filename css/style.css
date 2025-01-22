@@ -1,5 +1,4 @@
-/*---------------------------------*/
-
+/*------------------------------*/
 body {
   font-family: "Shippori Mincho", serif, 'Arial', sans-serif;
   background-color: #ffffff;
@@ -8,9 +7,10 @@ body {
 }
 
 .top {
-  text-align: center;
+  display: flex;
+  align-items: center; /* ロゴとナビの垂直位置を揃える */
+  text-align: left;
 }
-
 
 .top-line {
   width: 100%;
@@ -21,26 +21,40 @@ body {
 }
 
 .header {
+  position: absolute; /* 画像の上に重ねるため */
+  top: 0;
+  left: 0;
+  right: 0;
   color: rgb(255, 255, 255);
   padding: 1%;
+  z-index: 10; /* 他のコンテンツより上に表示 */
+  background-color: rgba(255, 255, 255, 0.8); /* 白の半透明背景 */
+  backdrop-filter: blur(8px); /* 背景にぼかしを追加して、背景が少し透ける効果を強調 */
+  
+  display: flex;
+  justify-content: space-between; /* ロゴとナビを左右に配置 */
+  align-items: center; /* 高さを中央揃え */
+}
+
+
+nav {
+  margin-left: 1rem; /* ナビゲーションとロゴの間隔を調整 (例えば 1rem) */
 }
 
 nav ul {
   list-style-type: none;
-  margin-top: 0.2%;
-  padding: 0.6%;
-  text-align: center;
+  margin-top: 0;
+  padding: 0;
+  display: flex; /* 横並びにする */
+  gap: 4rem; /* アイテム間のスペースを調整 (例: 1remに設定) */
 }
 
-nav ul li {
-  display: inline;
-  margin: 0 2%;
-}
 
 nav ul li a {
   color: rgb(46, 46, 46);
   text-decoration: none;
   font-size: 0.9vw;
+  white-space: nowrap; /* テキストが折り返されないように設定 */
 }
 
 nav ul li a:hover {
@@ -48,7 +62,8 @@ nav ul li a:hover {
   color: #3c803c;
 }
 
-/*---------------------------------*/
+/*-------------------------------*/
+
 .mainphoto {
   position: relative;
   width: 100%;
@@ -69,6 +84,8 @@ nav ul li a:hover {
 .mainphoto img:hover {
   filter: brightness(1); 
 }
+
+/*-------------------------------*/
 
 .in1 {
   padding: 5%;
@@ -113,9 +130,6 @@ nav ul li a:hover {
 }
 
 /*-------------------------------*/
-
-/*-------------------------------*/
-
 
 .min3 {
   padding-top: 10%;
