@@ -1,6 +1,6 @@
 /*------------------------------*/
 body {
-  font-family: "Shippori Mincho", serif, 'Arial', sans-serif;
+  font-family: "Shippori Mincho", serif, Arial, sans-serif;
   background-color: #ffffff;
   margin: 0;
   padding: 0;
@@ -92,6 +92,32 @@ nav ul li a:hover {
 }
 
 /*---------------------------------*/
+
+.section_companyinfo h2 {
+  font-size: 2vw;
+  text-align: center;
+  font-weight: 300;
+  padding: 5%;
+}
+
+.div_listflex {
+  display: flex;
+  flex-direction: column; 
+  padding: 0 20% 10% 20%;
+  font-size: 1.4vw;
+}
+
+.label {
+  color: #3c803c; 
+  width: 25%;
+}
+
+.div1{
+  display: flex;
+  border-bottom: 1px solid #cac6bd;
+  padding: 1.5vw 0; 
+  white-space: pre-line;
+}
 
 
 /*---------------------------------*/
