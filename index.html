@@ -3,49 +3,75 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>京都茶農業協同組合</title>
+  <title>ちゅらふぁーむ</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-</head>
+  <link rel="stylesheet" href="css/style-sp.css" media="(max-width: 768px)">
 
+
+</head>
 <body>
 
-  <div class="mainphoto">
-    <img src="images/chabatake1.jpg" alt="メインのお茶の画像">
-    <div class="overlay-text">
-      お茶の温もりで、心にやすらぎを。
-    </div>
+  <header class="header">
+  <div class="top">
+    <a href="index.html">
+      <img src="images/churafarm.png" alt="Chura Farm ロゴ">
+    </a>
   </div>
 
-  <header class="header">
-    <div class="top">
-        <a href="index.html"><img src="images/kyotocha.png" alt="京都茶農業協同組合のロゴ"></a>
-    </div>
-    <nav class="nav">
+  <!-- PC用ナビ -->
+  <nav class="nav">
+    <div class="nav-left">
       <ul>
-        <li><a href="menu.html">商品案内</a></li>
-        <li><a href="brew.html">美味しいお茶の淹れ方</a></li>
-        <li><a href="#benefits">宇治茶ブランドとは</a></li>
-        <li><a href="overview.html">組合について</a></li>
-        <li><a href="contact.html">お問い合わせ</a></li>
+        <li><a href="menu.html">こだわり</a></li>
+        <li><a href="brew.html">料金</a></li>
+        <li><a href="#benefits">営業時間</a></li>
       </ul>
-    </nav>
-  </header>
-
-  <section id="about">
-    <div class="in1">
-      たくさんの方に
-      楽しいお茶の時間を持っていただきたい
-      という願いをこめて「茶葉の力」「茶葉の本質」を
-      最大限生かした製品作りに力を注いでいます。
     </div>
+    <div class="nav-right">
+      <ul>
+        <li><a href="overview.html">お知らせ</a></li>
+        <li><a href="contact.html">アクセス</a></li>
+        <li><a href="contact.html">ご予約</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- スマホ用ハンバーガー -->
+  <button class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <!-- スマホ用ナビ -->
+  <nav class="sp-nav" id="spNav">
+    <ul>
+      <li><a href="menu.html">こだわり</a></li>
+      <li><a href="brew.html">料金</a></li>
+      <li><a href="#benefits">営業時間</a></li>
+      <li><a href="overview.html">お知らせ</a></li>
+      <li><a href="contact.html">アクセス</a></li>
+      <li><a href="contact.html">ご予約</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+<main>
+  <section class="main-visual">
+    <picture>
+      <img src="images/main_ichigo.jpg" alt="メインビジュアル">
+    </picture>
   </section>
+</main>
 
-  <footer>
-    <p class="foo">&copy; 京都茶農業協同組合</p>
-  </footer>
 
-  <script src="script.js"></script>
+
+
+
+  <!-- script src="script.js"></script> -->
+   <script src="js/sp-menu.js"></script>
 </body>
 </html>

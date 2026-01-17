@@ -1,0 +1,70 @@
+@media (max-width: 768px) {
+
+  /* PCナビを消す */
+  .nav {
+    display: none;
+  }
+
+  /* ロゴ */
+  .top img {
+    width: 40vw;
+  }
+
+  /* ハンバーガー表示 */
+  .hamburger {
+    display: block;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 30;
+  }
+
+  /* スマホナビ（初期：隠す） */
+  .sp-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100svh;
+    background: #fff;
+    z-index: 20;
+    transition: right 0.3s ease;
+  }
+
+  .sp-nav ul {
+    list-style: none;
+    padding: 80px 20px;
+  }
+
+  .sp-nav li {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .sp-nav a {
+    font-size: 6vw;
+    color: #333;
+    text-decoration: none;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .header {
+    height: 13vw;              /* ← 高さを固定 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .top img {
+    width: 25vw;   /* 40vw → 30vw */
+    max-width: 140px; 
+}
+
+}

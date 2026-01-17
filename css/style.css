@@ -1,6 +1,6 @@
 /*------------------------------*/
 body {
-  font-family: "Shippori Mincho", serif, 'Arial', sans-serif;
+  font-family: 'Noto Sans JP', serif, 'Arial', sans-serif;
   background-color: #ffffff;
   margin: 0;
   padding: 0;
@@ -8,91 +8,134 @@ body {
 
 .top {
   display: flex;
-  align-items: center; 
-  text-align: left;
-}
-
-.top img{
-  width: 16vw;
-  margin-left: 1.5vw;
-}
-
-.top-line {
+  justify-content: center; /* ロゴを中央に配置 */
+  align-items: center;
   width: 100%;
-  height: 0.5vw; 
-  background-color: #3c803c;
-  margin: 0; 
-  padding: 0; 
+}
+
+.top img {
+  width: 13vw;
 }
 
 .header {
-  position: absolute; 
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  padding: 0.3%;
   color: rgb(255, 255, 255);
-  z-index: 10; /* 他のコンテンツより上に表示 */
-  background-color: rgba(255, 255, 255, 0.4); /* 白の半透明背景 */
+  z-index: 10;
+  background-color: rgb(255, 255, 255);
   display: flex;
-  justify-content: space-between; /* ロゴとナビを左右に配置 */
-  align-items: center; /* 高さを中央揃え */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-image: linear-gradient(90deg, #e9baf5 0%, #e9baf5 25%, #f5a0bc 25%, #f5a0bc 50%, #fa7e7e 50%, #fa7e7e 75%, #ffb8d6 75%, #ffb8d6 100%);
+        background-size: 285px }
+
+nav {
+  margin-top: -5vw;
+  display: flex;
+  justify-content: space-between; /* 左右に分けて配置 */
+}
+
+.nav-left{
+  text-align: left;
+  margin-left: 0;
+  margin-right: auto;
+  align-items: center;
+  width: 50vw;
+}
+
+.nav-right{
+  text-align: right;
+  margin-left: 0;
+  margin-right: auto;
+  align-items: center;
 }
 
 nav ul {
   list-style-type: none;
-  display: flex; /* 横並びにする */
-  gap: 3.5vw; /* アイテム間のスペースを調整 (例: 1remに設定) */
+  display: flex;
+  gap: 2vw; /* アイテム間のスペースを調整 */
+}
+
+nav ul li {
+  text-align: center;
+  margin: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 nav ul li a {
-  color: rgb(46, 46, 46);
+  color: rgb(56, 56, 56);
   text-decoration: none;
-  font-size: 0.9vw;
-  white-space: nowrap; /* テキストが折り返されないように設定 */
-}
-
-nav ul li:last-child a {
-  margin-right: 3vw; /* 右側に余白を追加 */
+  font-size: 1.5vw;
+  white-space: nowrap;
 }
 
 nav ul li a:hover {
   text-decoration: underline;
-  color: #3c803c;
+  color: #a3596b;
 }
 
-/*-------------------------------*/
-
-.mainphoto {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden; 
-}
-
-.mainphoto img {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  min-height: 100%;
-  width: auto;
+html, body {
+  margin: 0;
   height: 100%;
 }
 
+main {
+  height: 100%;
+}
+
+/* 親に“確実な高さ”を与える */
+.main-visual {
+  width: 100%;
+  height: 100svh;   /* スマホで最重要 */
+  overflow: hidden;
+}
+
+/* picture が高さ0になるのを防ぐ */
+.main-visual picture {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* 画像本体 */
+.main-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+
+
+
 .overlay-text {
   position: absolute;
-  top: 50%; /* 画面の中央に配置 */
+  top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /* 文字を中央揃え */
-  color: white; /* 文字の色を白に設定 */
-  font-size: 2.3vw; /* 文字のサイズ */
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 7vw;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   text-align: center;
   letter-spacing: 0.1em;
 }
-
-/*-------------------------------*/
 
 .in1 {
   padding: 5%;
@@ -102,22 +145,10 @@ nav ul li a:hover {
   font-size: 1.8vw;
 }
 
-/*-------------------------------*/
 
-/*-------------------------------*/
+/* sp */
 
-footer {
-  background-color: #3c803c;
-  color: white;
-  text-align: center;
-  width: 100%;
-}
-
-.foo {
-  font-size: 1vw;
-  text-align: center;
-  padding-top: 5%;
-  padding-bottom: 5%;
-  margin-top: 0;
-  margin-bottom: 0;
+.hamburger,
+.sp-nav {
+  display: none;
 }
