@@ -2,6 +2,8 @@
 body {
   font-family: 'Noto Sans JP', serif, 'Arial', sans-serif;
   background-color: #ffffff;
+  color: #777;
+  font-weight: 500;
   margin: 0;
   padding: 0;
 }
@@ -13,17 +15,14 @@ body {
   width: 100%;
 }
 
-.top img {
-  width: 13vw;
-}
-
-.header {
+header {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   color: rgb(255, 255, 255);
   z-index: 10;
+  height: 120px; 
   background-color: rgb(255, 255, 255);
   display: flex;
   flex-direction: column;
@@ -34,70 +33,78 @@ body {
   margin-bottom: 10px;
 }
 
-.header::before {
+header::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 5px;
-    background-image: linear-gradient(90deg, #e9baf5 0%, #e9baf5 25%, #f5a0bc 25%, #f5a0bc 50%, #fa7e7e 50%, #fa7e7e 75%, #ffb8d6 75%, #ffb8d6 100%);
+    background-image: linear-gradient(90deg, #F51455 0%, #F51455 25%, #F65676 25%, #F65676 50%, #F8B1C1 50%, #F8B1C1 75%, #B0E7C6 75%, #B0E7C6 100%);
         background-size: 285px }
 
-nav {
-  margin-top: -5vw;
+.icon-nav {
+  height: 120px;          /* 固定 */
   display: flex;
-  justify-content: space-between; /* 左右に分けて配置 */
-}
-
-.nav-left{
-  text-align: left;
-  margin-left: 0;
-  margin-right: auto;
   align-items: center;
-  width: 50vw;
+  background: #fff;
 }
 
-.nav-right{
-  text-align: right;
-  margin-left: 0;
-  margin-right: auto;
+
+.icon-nav-list {
+  height: 100%;
+  display: flex; 
   align-items: center;
+  justify-content: center;
+  gap: 40px;
 }
 
-nav ul {
-  list-style-type: none;
+
+
+.icon-item {
   display: flex;
-  gap: 2vw; /* アイテム間のスペースを調整 */
-}
-
-nav ul li {
+  flex-direction: column;
+  align-items: center;
+  width: 100px;   
+  height: 100%;         
   text-align: center;
-  margin: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
+  justify-content: center;
 }
 
-nav ul li a {
-  color: rgb(56, 56, 56);
-  text-decoration: none;
-  font-size: 1.5vw;
-  white-space: nowrap;
+.icon-item img {
+  width: 45px;               /* アイコンサイズ */
+  height: auto;
 }
 
-nav ul li a:hover {
-  text-decoration: underline;
-  color: #a3596b;
+.icon-item span {
+  margin-top: 6px;
+  font-size: 12px;
+  color: #666;
 }
+
+
+.icon-item.logo {
+  width: 250px;          /* ロゴ枠を固定 */
+  height: 100%;          /* ← 高さを強制的に小さく */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(6px);
+}
+
+.icon-item.logo img {
+  max-height: 160px;
+  width: auto;
+}
+
 
 html, body {
   margin: 0;
   height: 100%;
 }
 
-main {
-  height: 100%;
-}
+
+
 
 /* 親に“確実な高さ”を与える */
 .main-visual {
@@ -144,6 +151,223 @@ main {
   text-align: center;
   font-size: 1.8vw;
 }
+
+/* =================
+   カード型ニュース
+================= */
+
+.news-card {
+  text-align: center;
+  margin: 120px auto;
+  padding: 0 40px;
+    background-color: #fff0f5; /* 薄いピンク */
+}
+
+.news-title {
+  font-size: 2.5vw;
+  margin-bottom: 50px;
+  color: #555;
+}
+
+
+.news-item {
+  width: 30%;
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.news-item:hover {
+  transform: translateY(-5px);
+}
+
+.news-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.news-body {
+  padding: 20px;
+  text-align: left;
+}
+
+.news-meta {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.news-meta time {
+  font-size: 0.9vw;
+  color: #999;
+}
+
+.tag {
+  background: #F65676;
+  color: #fff;
+  font-size: 0.8vw;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+.news-body h3 {
+  font-size: 1.2vw;
+  font-weight: 600;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* ===== PC（デフォルト） ===== */
+.news-slider {
+  position: static;
+}
+
+.news-cards {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  transform: none !important;   /* PCでは動かさない */
+}
+
+.news-item {
+  width: 30%;
+}
+
+/* 矢印はPCでは非表示 */
+.arrow {
+  display: none;
+}
+
+
+
+/* もっと見る */
+.news-more {
+  margin-top: 50px;
+}
+
+.news-more a {
+  display: inline-block;
+  padding: 12px 40px;
+  border: 2px solid #F65676;
+  border-radius: 30px;
+  color: #F65676;
+  background-color: #fff; 
+  white-space: pre;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.news-more a:hover {
+  background: #F65676;
+  color: #fff;
+}
+
+
+
+/* 共通ボタン */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 30px;
+  border: 1px solid #333;
+  color: #333;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #333;
+  color: #fff;
+}
+
+/* =================
+   こだわり
+================= */
+.concept,
+.experience {  
+  align-items: center;
+  text-align: center;  /* 縦中央 */
+}
+
+
+/* PCは“中央カラム＋余裕ある幅” */
+.concept-inner,
+.experience-inner {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+
+.concept-text h2,
+.experience-text h2 {
+  font-size: 2.5vw;
+  margin-bottom: 20px;
+}
+
+.concept-text p,
+.experience-text p {
+  max-width: 600px;
+  font-size: 1.2vw;
+  margin: 0 auto;
+}
+
+
+.concept-image,
+.experience-image {
+  margin-top: 40px;
+}
+
+.concept-image img,
+.experience-image img {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+
+/* =================
+   フッター
+================= */
+
+.footer {
+  background-color: #f7f7f7;
+  text-align: center;
+  padding: 40px 20px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* 住所（上下を詰める） */
+.footer-address {
+  margin: 0;          /* デフォルト余白を消す */
+  font-size: 0.9vw;
+}
+
+.footer-tel {
+  margin-top: 20px;
+  font-size: 1.1vw;   /* TELのサイズ */
+  color: #555;
+}
+
+.tel-number {
+  font-size: 2.1vw;     /* ← ここだけ大きく */
+  font-weight: 600;
+}
+
+.tel-number a {
+  color: #555;
+  text-decoration: none;
+}
+
+.tel-number a:hover {
+  text-decoration: underline;
+}
+
+
 
 
 /* sp */

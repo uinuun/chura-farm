@@ -1,25 +1,46 @@
+/* =========================
+   スマホ用CSS（整理版）
+========================= */
 @media (max-width: 768px) {
 
-  /* PCナビを消す */
+  /* -----------------
+     ヘッダー
+  ----------------- */
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 13vw;
+    background: #fff;
+    z-index: 30;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .top img {
+    width: 25vw;
+    max-width: 140px;
+  }
+
+  /* PCナビ非表示 */
   .nav {
     display: none;
   }
 
-  /* ロゴ */
-  .top img {
-    width: 40vw;
-  }
-
-  /* ハンバーガー表示 */
+  /* ハンバーガー */
   .hamburger {
     display: block;
     position: fixed;
     top: 20px;
     right: 20px;
-    z-index: 30;
+    z-index: 40;
   }
 
-  /* スマホナビ（初期：隠す） */
+  /* -----------------
+     スマホナビ
+  ----------------- */
   .sp-nav {
     position: fixed;
     top: 0;
@@ -27,44 +48,124 @@
     width: 100%;
     height: 100svh;
     background: #fff;
-    z-index: 20;
     transition: right 0.3s ease;
+    z-index: 35;
+  }
+
+  .sp-nav.active {
+    right: 0;
   }
 
   .sp-nav ul {
     list-style: none;
-    padding: 80px 20px;
+    padding: 100px 20px;
+    text-align: center;
   }
 
   .sp-nav li {
-    margin-bottom: 20px;
-    text-align: center;
+    margin-bottom: 24px;
   }
 
   .sp-nav a {
     font-size: 6vw;
-    color: #333;
+    color: #555;
     text-decoration: none;
   }
 
-}
+  /* -----------------
+     メインビジュアル
+  ----------------- */
+  .main-visual {
+    height: 100svh;
+  }
 
-@media (max-width: 768px) {
+  /* -----------------
+     ニュース（スライダー）
+  ----------------- */
+  .news {
+    margin: 80px auto;
+    padding: 0 20px;
+  }
 
-  .header {
-    height: 13vw;              /* ← 高さを固定 */
+  .news-title {
+    font-size: 6vw;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .news-slider {
+    position: relative;
+  }
+
+  .news-cards {
+    display: flex;                 /* ← 横並び */
+    flex-direction: row;
+    overflow: hidden;
+    transition: transform 0.4s ease;
+  }
+
+  .news-item {
+    min-width: 100%;               /* 1枚ずつ */
+    flex-shrink: 0;
+  }
+
+  /* 矢印 */
+  .arrow {
+    display: block;
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    background: #fff;
+    border: none;
+    font-size: 28px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    z-index: 5;
+  }
+
+  .arrow.prev { left: -10px; }
+  .arrow.next { right: -10px; }
+
+  /* -----------------
+     こだわり / いちご狩り
+  ----------------- */
+  .concept,
+  .experience {
+    min-height: 100svh;
     display: flex;
-    justify-content: center;
     align-items: center;
   }
 
-}
+  .concept-inner,
+  .experience-inner {
+    padding: 0 20px;
+    text-align: center;
+  }
 
-@media (max-width: 768px) {
+  .concept-text h2,
+  .experience-text h2 {
+    font-size: 6vw;
+  }
 
-  .top img {
-    width: 25vw;   /* 40vw → 30vw */
-    max-width: 140px; 
-}
+  .concept-text p,
+  .experience-text p {
+    font-size: 4vw;
+  }
+
+  /* -----------------
+     フッター
+  ----------------- */
+  .footer-address,
+  .footer-tel {
+    font-size: 14px;
+    color: #555;
+  }
+
+  .tel-number {
+    font-size: 22px;
+    font-weight: 600;
+  }
 
 }

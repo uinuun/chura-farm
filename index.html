@@ -11,52 +11,76 @@
 
 
 </head>
+
 <body>
+  <header>
 
-  <header class="header">
-  <div class="top">
-    <a href="index.html">
-      <img src="images/churafarm.png" alt="Chura Farm ロゴ">
-    </a>
-  </div>
+      <nav class="icon-nav">
+      <ul class="icon-nav-list">
 
-  <!-- PC用ナビ -->
-  <nav class="nav">
-    <div class="nav-left">
-      <ul>
-        <li><a href="menu.html">こだわり</a></li>
-        <li><a href="brew.html">料金</a></li>
-        <li><a href="#benefits">営業時間</a></li>
+        <!-- 左メニュー -->
+        <li class="icon-item">
+          <img src="images/icon-concept.png" alt="">
+          <span>こだわり</span>
+        </li>
+
+        <li class="icon-item">
+          <img src="images/icon-info.png" alt="">
+          <span>ご案内</span>
+        </li>
+
+        <li class="icon-item">
+          <img src="images/icon-price.png" alt="">
+          <span>料金</span>
+        </li>
+
+        <!-- 中央ロゴ -->
+        <li class="icon-item logo">
+          <img src="images/churafarm-icon.png" alt="ちゅらふぁーむ">
+        </li>
+
+        <!-- 右メニュー -->
+        <li class="icon-item">
+          <img src="images/icon-news.png" alt="">
+          <span>お知らせ</span>
+        </li>
+
+        <li class="icon-item">
+          <img src="images/icon-access.png" alt="">
+          <span>アクセス</span>
+        </li>
+
+        <li class="icon-item">
+          <img src="images/icon-reserve.png" alt="">
+          <span>ご予約</span>
+        </li>
+
       </ul>
-    </div>
-    <div class="nav-right">
-      <ul>
-        <li><a href="overview.html">お知らせ</a></li>
-        <li><a href="contact.html">アクセス</a></li>
-        <li><a href="contact.html">ご予約</a></li>
-      </ul>
-    </div>
-  </nav>
+    </nav>
 
-  <!-- スマホ用ハンバーガー -->
-  <button class="hamburger" id="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
+      <!-- スマホ用ハンバーガー -->
+      <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-  <!-- スマホ用ナビ -->
-  <nav class="sp-nav" id="spNav">
-    <ul>
-      <li><a href="menu.html">こだわり</a></li>
-      <li><a href="brew.html">料金</a></li>
-      <li><a href="#benefits">営業時間</a></li>
-      <li><a href="overview.html">お知らせ</a></li>
-      <li><a href="contact.html">アクセス</a></li>
-      <li><a href="contact.html">ご予約</a></li>
-    </ul>
-  </nav>
-</header>
+      <!-- スマホ用ナビ -->
+      <nav class="sp-nav" id="spNav">
+        <ul>
+          <li><a href="menu.html">こだわり</a></li>
+          <li><a href="brew.html">料金</a></li>
+          <li><a href="#benefits">営業時間</a></li>
+          <li><a href="overview.html">お知らせ</a></li>
+          <li><a href="contact.html">アクセス</a></li>
+          <li><a href="contact.html">ご予約</a></li>
+        </ul>
+      </nav>
+
+  </header>
+
+  
+
 
 
 <main>
@@ -65,9 +89,116 @@
       <img src="images/main_ichigo.jpg" alt="メインビジュアル">
     </picture>
   </section>
+
+
+  <section class="news-card">
+  <h2 class="news-title">お知らせ・ニュース</h2>
+
+    <div class="news-slider">
+      <button class="arrow prev" id="newsPrev"> </button>
+    </div>
+  <div class="news-cards" id="newsTrack">
+    <!-- カード1 -->
+    <article class="news-item">
+      <div class="news-image">
+        <img src="images/news1.jpg" alt="">
+      </div>
+      <div class="news-body">
+        <div class="news-meta">
+          <span class="tag">その他</span>
+          <time>2024.12.27</time>
+        </div>
+        <h3>年末年始のお知らせ</h3>
+      </div>
+    </article>
+
+    <!-- カード2 -->
+    <article class="news-item">
+      <div class="news-image">
+        <img src="images/news2.jpg" alt="">
+      </div>
+      <div class="news-body">
+        <div class="news-meta">
+          <span class="tag">いちご狩り</span>
+          <time>2024.12.15</time>
+        </div>
+        <h3>今シーズンのいちご狩りについて</h3>
+      </div>
+    </article>
+
+    <!-- カード3 -->
+    <article class="news-item">
+      <div class="news-image">
+        <img src="images/news3.jpg" alt="">
+      </div>
+      <div class="news-body">
+        <div class="news-meta">
+          <span class="tag">お知らせ</span>
+          <time>2024.11.30</time>
+        </div>
+        <h3>ホームページを公開しました</h3>
+      </div>
+    </article>
+  </div>
+
+  <div class="news-more">
+    <a href="#">        もっと見る        </a>
+  </div>
+</section>
+
+
+
+  <!-- こだわり -->
+<section class="concept">
+  <div class="concept-inner">
+    <div class="concept-text">
+      <h2>ちゅらふぁーむのこだわり</h2>
+      <p>
+        自然豊かな環境で、<br>
+        一粒一粒ていねいに育てたいちご。<br>
+        甘さと香りにこだわった、<br>
+        ちゅらふぁーむ自慢のいちごです。
+      </p>
+      <a href="menu.html" class="btn">詳しく見る</a>
+    </div>
+    <div class="concept-image">
+      <!-- <img src="images/concept.jpg" alt="こだわりのいちご"> -->
+    </div>
+  </div>
+</section>
+
+<!-- いちご狩りについて -->
+<section class="experience">
+  <div class="experience-inner">
+    <div class="experience-image">
+      <!-- <img src="images/experience.jpg" alt="いちご狩りの様子"> -->
+    </div>
+    <div class="experience-text">
+      <h2>いちご狩りについて</h2>
+      <p>
+        完熟いちごをその場で味わえる<br>
+        ちゅらふぁーむのいちご狩り。<br>
+        ご家族・ご友人と<br>
+        楽しいひとときをお過ごしください。
+      </p>
+      <a href="brew.html" class="btn">料金・詳細はこちら</a>
+    </div>
+  </div>
+</section>
+
+
+
 </main>
 
 
+<footer class="footer">
+  <p class="footer-address">〒270-1403 千葉県白井市清戸88</p>
+  <p class="footer-address">北総鉄道 「小室駅」 より 徒歩16分</p>
+  <p class="footer-tel">
+    TEL .  <span class="tel-number">
+    <a href="tel:0123456789">012 - 345 - 6789</a> </span>
+  </p>
+</footer>
 
 
 
