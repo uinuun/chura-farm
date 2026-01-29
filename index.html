@@ -4,99 +4,91 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ちゅらふぁーむ</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/style-sp.css" media="(max-width: 768px)">
-
-
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/style-sp.css" media="(max-width:768px)">
 </head>
 
 <body>
-  <header>
 
-      <nav class="icon-nav">
-      <ul class="icon-nav-list">
+<!-- =================
+  ヘッダー
+================= -->
+<header class="header">
+  <div class="header-bg">
+  <div class="header-inner">
 
-        <!-- 左メニュー -->
-        <li class="icon-item">
-          <img src="images/icon-concept.png" alt="">
-          <span>こだわり</span>
-        </li>
+    <!-- ロゴ -->
+    <h1 class="header-logo">
+      <img src="images/churafarm-icon.png" alt="ちゅらふぁーむ">
+    </h1>
 
-        <li class="icon-item">
-          <img src="images/icon-info.png" alt="">
-          <span>ご案内</span>
-        </li>
-
-        <li class="icon-item">
-          <img src="images/icon-price.png" alt="">
-          <span>料金</span>
-        </li>
-
-        <!-- 中央ロゴ -->
-        <li class="icon-item logo">
-          <img src="images/churafarm-icon.png" alt="ちゅらふぁーむ">
-        </li>
-
-        <!-- 右メニュー -->
-        <li class="icon-item">
-          <img src="images/icon-news.png" alt="">
-          <span>お知らせ</span>
-        </li>
-
-        <li class="icon-item">
-          <img src="images/icon-access.png" alt="">
-          <span>アクセス</span>
-        </li>
-
-        <li class="icon-item">
-          <img src="images/icon-reserve.png" alt="">
-          <span>ご予約</span>
-        </li>
-
+    <!-- ナビ -->
+    <nav class="header-nav">
+      <ul>
+        <li><a href="index.html">トップ</a></li>
+        <li><a href="news.html">お知らせ</a></li>
+        <li><a href="strawberry.html">いちご狩り</a></li>
+        <li><a href="concept.html">こだわり</a></li>
+        <li><a href="access.html">アクセス</a></li>
+        <li class="reserve"><a href="reserve">ご予約</a></li>
       </ul>
     </nav>
+  </div>
+  </div>
 
-      <!-- スマホ用ハンバーガー -->
-      <button class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
-      <!-- スマホ用ナビ -->
-      <nav class="sp-nav" id="spNav">
-        <ul>
-          <li><a href="menu.html">こだわり</a></li>
-          <li><a href="brew.html">料金</a></li>
-          <li><a href="#benefits">営業時間</a></li>
-          <li><a href="overview.html">お知らせ</a></li>
-          <li><a href="contact.html">アクセス</a></li>
-          <li><a href="contact.html">ご予約</a></li>
-        </ul>
-      </nav>
-
-  </header>
-
-  
+  <div class="header-wave">
+  <svg viewBox="-200 0 1840 60" preserveAspectRatio="none">
+    <path
+      d="
+        M-200,35
+        C0,15 240,55 480,35
+        C720,15 960,55 1200,35
+        C1440,15 1680,55 1840,35
+        L1840,0
+        L-200,0
+        Z
+      "
+      fill="#fff"
+    />
+  </svg>
+  </div>
 
 
+</header>
 
+<!-- =================
+  メイン
+================= -->
 <main>
-  <section class="main-visual">
-    <picture>
-      <img src="images/main_ichigo.jpg" alt="メインビジュアル">
-    </picture>
-  </section>
+
+<!-- メインビジュアル -->
+<section class="main-visual">
+  <img src="images/main_ichigo.jpg" alt="いちご畑の写真">
+  <div class="main-copy">
+    <!-- <h2>甘くて、あたたかい<br>ちゅらふぁーむのいちご</h2> -->
+  </div>
+</section>
+
+<!-- =================
+  お知らせ
+================= -->
+
+<section class="news-card">
+
+  <div class="news-wave">
+    <!-- なみなみSVG -->
+    <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+      <path d="M0,80 C240,40 480,40 720,60 960,80 1200,80 1440,60 L1440,0 L0,0 Z"
+            fill="#e7ced3"/>
+    </svg>
+  </div>
 
 
-  <section class="news-card">
-  <h2 class="news-title">お知らせ・ニュース</h2>
+  <h2 class="news-title">お知らせ</h2>
 
-    <div class="news-slider">
-      <button class="arrow prev" id="newsPrev"> </button>
-    </div>
   <div class="news-cards" id="newsTrack">
     <!-- カード1 -->
     <article class="news-item">
@@ -147,62 +139,122 @@
 </section>
 
 
+<!-- =================
+  こだわり
+================= -->
+<section id="concept" class="concept">
+  <h2 class="section-title">ちゅらふぁーむのこだわり</h2>
 
-  <!-- こだわり -->
-<section class="concept">
-  <div class="concept-inner">
-    <div class="concept-text">
-      <h2>ちゅらふぁーむのこだわり</h2>
-      <p>
-        自然豊かな環境で、<br>
-        一粒一粒ていねいに育てたいちご。<br>
-        甘さと香りにこだわった、<br>
-        ちゅらふぁーむ自慢のいちごです。
-      </p>
-      <a href="menu.html" class="btn">詳しく見る</a>
-    </div>
-    <div class="concept-image">
-      <!-- <img src="images/concept.jpg" alt="こだわりのいちご"> -->
-    </div>
+  <div class="concept-cards">
+
+    <article class="concept-card">
+      <img src="images/concept1.jpg" alt="">
+      <h3>自然豊かな環境</h3>
+      <p>太陽の光と土の力を大切にし、安心・安全ないちごを育てています。</p>
+    </article>
+
+    <article class="concept-card">
+      <img src="images/concept2.jpg" alt="">
+      <h3>完熟収穫</h3>
+      <p>一番おいしいタイミングを見極めて、丁寧に収穫しています。</p>
+    </article>
+
+    <article class="concept-card">
+      <img src="images/concept3.jpg" alt="">
+      <h3>家族で楽しめる</h3>
+      <p>小さなお子さまから大人まで、笑顔になれる農園です。</p>
+    </article>
+
   </div>
 </section>
 
-<!-- いちご狩りについて -->
-<section class="experience">
-  <div class="experience-inner">
-    <div class="experience-image">
-      <!-- <img src="images/experience.jpg" alt="いちご狩りの様子"> -->
-    </div>
-    <div class="experience-text">
-      <h2>いちご狩りについて</h2>
+<!-- =================
+  いちご狩りについて
+================= -->
+<section id="guide" class="guide">
+  <div class="guide-inner">
+
+    <div class="guide-text">
+      <h2 class="section-title">いちご狩りについて</h2>
       <p>
-        完熟いちごをその場で味わえる<br>
-        ちゅらふぁーむのいちご狩り。<br>
-        ご家族・ご友人と<br>
-        楽しいひとときをお過ごしください。
+        ちゅらふぁーむでは、時間制限内で<br>
+        新鮮ないちごを心ゆくまでお楽しみいただけます。
       </p>
-      <a href="brew.html" class="btn">料金・詳細はこちら</a>
+      <ul>
+        <li>🍓 30分食べ放題</li>
+        <li>🍓 雨の日でも安心なハウス栽培</li>
+        <li>🍓 ベビーカーOK</li>
+      </ul>
+      <a href="#" class="btn">詳しく見る</a>
     </div>
+
+    <div class="guide-image">
+      <img src="images/guide.jpg" alt="いちご狩りの様子">
+    </div>
+
   </div>
 </section>
 
 
 
-</main>
-
-
+<!-- =================
+  フッター
+================= -->
 <footer class="footer">
+      <!-- フッターなみなみ -->
+    <div class="footer-wave">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+        <path
+          d="M0,40
+            C240,80 480,0 720,40
+            C960,80 1200,0 1440,40
+            L1440,120
+            L0,120
+            Z"
+          fill="#f7e3f2"
+        />
+      </svg>
+    </div>
+
   <p class="footer-address">〒270-1403 千葉県白井市清戸88</p>
   <p class="footer-address">北総鉄道 「小室駅」 より 徒歩16分</p>
   <p class="footer-tel">
-    TEL .  <span class="tel-number">
-    <a href="tel:0123456789">012 - 345 - 6789</a> </span>
+    TEL .
+    <span class="tel-number">
+      <a href="tel:0123456789">012 - 345 - 6789</a>
+    </span>
   </p>
+
+  <div class="footer-reserve">
+  <a href="#" class="footer-reserve-btn">WEB でご予約</a>
+  </div>
+
+  <div class="footer-bottom">
+
+  <nav class="footer-nav">
+    <a href="#">ホーム</a>
+    <a href="#">お知らせ</a>
+    <a href="#">いちご狩り</a>
+    <a href="#">こだわり</a>
+    <a href="#">アクセス</a>
+    <a href="#">採用情報</a>
+    <a href="#">サイトマップ</a>
+  </nav>
+
+  <p class="footer-copy">
+    ©2026 ちゅらふぁーむ
+  </p>
+
+</div>
+
+
 </footer>
 
+<!-- =================
+  ＪＳ
+================= -->
 
+<script src="js/header.js"></script>
 
-  <!-- script src="script.js"></script> -->
-   <script src="js/sp-menu.js"></script>
 </body>
 </html>

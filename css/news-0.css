@@ -1,0 +1,62 @@
+/* =========================
+  共通設定
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Noto Sans JP", sans-serif;
+  color: #333;
+  line-height: 1.7;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 48px;
+}
+
+
+.news-detail {
+  max-width: 800px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+.news-detail-meta {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.news-detail h1 {
+  font-size: 28px;
+  margin-bottom: 32px;
+}
+
+.news-detail p {
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+
+.news-back {
+  margin-top: 60px;
+}
+
+.news-back a {
+  color: #e94e77;
+  font-weight: bold;
+}

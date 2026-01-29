@@ -1,166 +1,109 @@
-/*------------------------------*/
+/* =========================
+  共通設定
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: 'Noto Sans JP', serif, 'Arial', sans-serif;
-  background-color: #ffffff;
-  color: #777;
-  font-weight: 500;
   margin: 0;
-  padding: 0;
+  font-family: "Noto Sans JP", sans-serif;
+  color: #333;
+  line-height: 1.7;
 }
 
-.top {
-  display: flex;
-  justify-content: center; /* ロゴを中央に配置 */
-  align-items: center;
-  width: 100%;
-}
-
-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  color: rgb(255, 255, 255);
-  z-index: 10;
-  height: 120px; 
-  background-color: rgb(255, 255, 255);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px 0;
-  width: 100%;
-  margin-bottom: 10px;
-}
-
-header::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 5px;
-    background-image: linear-gradient(90deg, #F51455 0%, #F51455 25%, #F65676 25%, #F65676 50%, #F8B1C1 50%, #F8B1C1 75%, #B0E7C6 75%, #B0E7C6 100%);
-        background-size: 285px }
-
-.icon-nav {
-  height: 120px;          /* 固定 */
-  display: flex;
-  align-items: center;
-  background: #fff;
-}
-
-
-.icon-nav-list {
-  height: 100%;
-  display: flex; 
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-}
-
-
-
-.icon-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100px;   
-  height: 100%;         
-  text-align: center;
-  justify-content: center;
-}
-
-.icon-item img {
-  width: 45px;               /* アイコンサイズ */
-  height: auto;
-}
-
-.icon-item span {
-  margin-top: 6px;
-  font-size: 12px;
-  color: #666;
-}
-
-
-.icon-item.logo {
-  width: 250px;          /* ロゴ枠を固定 */
-  height: 100%;          /* ← 高さを強制的に小さく */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transform: translateY(6px);
-}
-
-.icon-item.logo img {
-  max-height: 160px;
-  width: auto;
-}
-
-
-html, body {
-  margin: 0;
-  height: 100%;
-}
-
-
-
-
-/* 親に“確実な高さ”を与える */
-.main-visual {
-  width: 100%;
-  height: 100svh;   /* スマホで最重要 */
-  overflow: hidden;
-}
-
-/* picture が高さ0になるのを防ぐ */
-.main-visual picture {
-  width: 100%;
-  height: 100%;
+img {
+  max-width: 100%;
   display: block;
 }
 
-/* 画像本体 */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 48px;
+}
+
+
+
+/* =========================
+  メインビジュアル
+========================= */
+
+.main-visual {
+  width: 100%;
+  height: 100vh;        /* ← 画面の高さに固定 */
+  overflow: hidden;
+  margin-top: -40px;
+}
+
 .main-visual img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: calc(100vh - 10px);
+  object-fit: cover;    /* ← 画面いっぱいにトリミング */
   object-position: center;
   display: block;
 }
 
 
-
-
-.overlay-text {
+.main-copy {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 7vw;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #fff;
   text-align: center;
-  letter-spacing: 0.1em;
 }
 
-.in1 {
-  padding: 5%;
-  white-space: pre-line;
-  line-height: 2;
-  text-align: center;
-  font-size: 1.8vw;
+.main-copy h2 {
+  font-size: 40px;
+  line-height: 1.4;
+  text-shadow: 0 4px 10px rgba(0,0,0,0.4);
 }
+
 
 /* =================
-   カード型ニュース
+   お知らせ
 ================= */
+
+.news {
+  position: relative;
+  padding-top: 120px; /* 波の分だけ余白 */
+}
+
+.news-wave {
+  position: absolute;
+  top: -100px;        /* ← ここで被せ具合を調整 */
+  left: 0;
+  width: 100%;
+  height: 120px;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.news-wave svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  transform: rotate(180deg);
+}
+
 
 .news-card {
   text-align: center;
-  margin: 120px auto;
-  padding: 0 40px;
-    background-color: #fff0f5; /* 薄いピンク */
+  padding: 120px 40px 60px;
+  background-color: #fff0f5;
+  position: relative;   /* ← 超重要 */
+  background: #e7ced3;
+  padding-top: 120px; 
 }
 
 .news-title {
@@ -168,7 +111,6 @@ html, body {
   margin-bottom: 50px;
   color: #555;
 }
-
 
 .news-item {
   width: 30%;
@@ -229,18 +171,12 @@ html, body {
   display: flex;
   gap: 40px;
   justify-content: center;
-  transform: none !important;   /* PCでは動かさない */
+  transform: none !important;
 }
 
 .news-item {
   width: 30%;
 }
-
-/* 矢印はPCでは非表示 */
-.arrow {
-  display: none;
-}
-
 
 
 /* もっと見る */
@@ -254,7 +190,7 @@ html, body {
   border: 2px solid #F65676;
   border-radius: 30px;
   color: #F65676;
-  background-color: #fff; 
+  background-color: #fff;
   white-space: pre;
   text-decoration: none;
   transition: 0.3s;
@@ -265,114 +201,83 @@ html, body {
   color: #fff;
 }
 
+/* =========================
+  こだわり
+========================= */
 
+.concept {
+  padding: 80px 40px;
+  background: #f3dee3;
+}
 
-/* 共通ボタン */
+.concept-cards {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.concept-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.concept-card h3 {
+  font-size: 20px;
+  margin: 16px;
+}
+
+.concept-card p {
+  margin: 0 16px 24px;
+  font-size: 14px;
+}
+
+/* =========================
+  いちご狩りについて
+========================= */
+
+.guide {
+  padding: 80px 40px;
+  background: #fdefef;
+}
+
+.guide-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+
+.guide-text {
+  flex: 1;
+}
+
+.guide-text ul {
+  padding-left: 20px;
+  margin: 24px 0;
+}
+
+.guide-text li {
+  margin-bottom: 8px;
+}
+
 .btn {
   display: inline-block;
-  margin-top: 20px;
-  padding: 10px 30px;
-  border: 1px solid #333;
-  color: #333;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  background: #333;
+  background: #e94e77;
   color: #fff;
+  padding: 12px 28px;
+  border-radius: 999px;
+  font-weight: bold;
 }
 
-/* =================
-   こだわり
-================= */
-.concept,
-.experience {  
-  align-items: center;
-  text-align: center;  /* 縦中央 */
-}
-
-
-/* PCは“中央カラム＋余裕ある幅” */
-.concept-inner,
-.experience-inner {
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+.guide-image {
+  flex: 1;
 }
 
 
-.concept-text h2,
-.experience-text h2 {
-  font-size: 2.5vw;
-  margin-bottom: 20px;
-}
-
-.concept-text p,
-.experience-text p {
-  max-width: 600px;
-  font-size: 1.2vw;
-  margin: 0 auto;
-}
-
-
-.concept-image,
-.experience-image {
-  margin-top: 40px;
-}
-
-.concept-image img,
-.experience-image img {
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-
-/* =================
-   フッター
-================= */
-
-.footer {
-  background-color: #f7f7f7;
-  text-align: center;
-  padding: 40px 20px;
-  color: #555;
-  line-height: 1.6;
-}
-
-/* 住所（上下を詰める） */
-.footer-address {
-  margin: 0;          /* デフォルト余白を消す */
-  font-size: 0.9vw;
-}
-
-.footer-tel {
-  margin-top: 20px;
-  font-size: 1.1vw;   /* TELのサイズ */
-  color: #555;
-}
-
-.tel-number {
-  font-size: 2.1vw;     /* ← ここだけ大きく */
-  font-weight: 600;
-}
-
-.tel-number a {
-  color: #555;
-  text-decoration: none;
-}
-
-.tel-number a:hover {
-  text-decoration: underline;
-}
-
-
-
-
-/* sp */
-
-.hamburger,
-.sp-nav {
-  display: none;
-}
